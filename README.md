@@ -1,5 +1,8 @@
 # docker-geoserver
 
+**Forked from https://github.com/kartoza/docker-geoserver for modification to enable support for Spatialite**
+
+
 A simple docker container that runs Geoserver influenced by this docker
 recipe: https://github.com/eliotjordan/docker-geoserver/blob/master/Dockerfile
 
