@@ -122,3 +122,13 @@ RUN if [ "$TOMCAT_EXTRAS" = false ]; then \
 
 # Delete resources after installation
 RUN rm -rf /tmp/resources
+
+# Add SpatialLite plugin and dependency libraries
+RUN apt-get update && apt-get install -y \
+      libgeos* \
+      libproj-java \
+      libproj0 \
+      proj-data
+# current community release of spatialite plugin 
+# (http://ares.boundlessgeo.com/geoserver/master/community-latest/geoserver-2.12-SNAPSHOT-spatialite-plugin.zip) is 
+# empty. Will continue development when there is a usable plugin to develop against. 
